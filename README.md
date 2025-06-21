@@ -2,6 +2,7 @@
 
 A fully functional API server for managing tasks, built with **Next.js App Router**, **NeonDB + Drizzle ORM**, and optional React frontend for user interaction. This API allows users to **Create**, **Read**, **Update**, and **Delete** tasks.
 
+> ✅ **All API endpoints are tested and verified using [Postman](https://www.postman.com/)**.
 ---
 
 ## 🚀 Tech Stack
@@ -9,8 +10,8 @@ A fully functional API server for managing tasks, built with **Next.js App Route
 - **Framework:** Next.js 14 (App Router)
 - **Database:** PostgreSQL (via [Neon](https://neon.tech/))
 - **ORM:** Drizzle ORM
-- **Frontend (Optional):** React + Tailwind CSS
-- **Deployment Ready:** Yes (Vercel-compatible)
+- **Frontend:** React + Tailwind CSS
+- **Deployed:** Yes
 
 ---
 
