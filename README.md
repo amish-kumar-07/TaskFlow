@@ -5,6 +5,11 @@ A fully functional API server for managing tasks, built with **Next.js App Route
 > ✅ **All API endpoints are tested and verified using [Postman](https://www.postman.com/)**.
 ---
 
+## 🔗 Live Project
+
+👉 **[Visit the Live App](https://task-flow-hazel-xi.vercel.app/)**
+---
+
 ## 🚀 Tech Stack
 
 - **Framework:** Next.js 14 (App Router)
