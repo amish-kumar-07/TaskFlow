@@ -57,7 +57,7 @@ A fully functional API server for managing tasks, built with **Next.js App Route
 ```json
 {
   "title": "Finish assignment",
-  "description": "Submit before deadline",
+  "description": "Submit",
   "dueDate": "2025-06-22T00:00:00.000Z"
 }
 ```
@@ -66,13 +66,13 @@ A fully functional API server for managing tasks, built with **Next.js App Route
 
 ```json
 {
-  "id": 3,
-  "title": "Finish assignment",
-  "description": "Submit before deadline",
-  "completed": false,
-  "dueDate": "2025-06-22T00:00:00.000Z",
-  "createdAt": "2025-06-21T10:00:00.000Z",
-  "updatedAt": "2025-06-21T10:00:00.000Z"
+    "id": 7,
+    "title": "Finish assignment",
+    "description": "Submit",
+    "completed": false,
+    "dueDate": "2025-06-22T00:00:00.000Z",
+    "createdAt": "2025-06-21T06:43:19.440Z",
+    "updatedAt": "2025-06-21T06:43:19.440Z"
 }
 ```
 
