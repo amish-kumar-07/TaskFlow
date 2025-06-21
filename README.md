@@ -1,16 +1,3 @@
-Here's a well-structured **`README.md`** file for your **To-Do Task API Project**, covering:
-
-* Project overview
-* Technologies used
-* API documentation (all endpoints)
-* How to run the project
-* Sample requests and responses
-
----
-
-## ✅ `README.md`
-
-````md
 # ✅ TaskFlow API — Custom Task Management API
 
 A fully functional API server for managing tasks, built with **Next.js App Router**, **NeonDB + Drizzle ORM**, and optional React frontend for user interaction. This API allows users to **Create**, **Read**, **Update**, and **Delete** tasks.
