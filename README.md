@@ -112,7 +112,7 @@ A fully functional API server for managing tasks, built with **Next.js App Route
 
 ### 4. 🔴 Delete a Task
 
-* **URL:** `/api/deletetask?id=<taskId>`
+* **URL:** `/api/delete?id=<taskId>`
 * **Method:** `DELETE`
 * **Description:** Deletes a task by its ID.
 
@@ -120,13 +120,17 @@ A fully functional API server for managing tasks, built with **Next.js App Route
 
 ```json
 {
-  "success": true,
-  "message": "Task deleted",
-  "data": {
-    "id": 3,
-    "title": "Finish assignment",
-    ...
-  }
+    "success": true,
+    "message": "Task deleted",
+    "data": {
+        "id": 3,
+        "title": "Amish 3",
+        "description": "test 3",
+        "completed": true,
+        "dueDate": "2025-07-30T00:00:00.000Z",
+        "createdAt": "2025-06-21T06:10:36.964Z",
+        "updatedAt": "2025-06-21T06:48:16.895Z"
+    }
 }
 ```
 
@@ -137,8 +141,7 @@ A fully functional API server for managing tasks, built with **Next.js App Route
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/your-username/task-api
-   cd task-api
+   git clone https://github.com/amish-kumar-07/TaskFlow
    ```
 
 2. **Install dependencies**
@@ -161,23 +164,6 @@ A fully functional API server for managing tasks, built with **Next.js App Route
 
 ---
 
-## 🌐 Optional Frontend
-
-Want to build a frontend?
-
-Use this prompt with **Bolt** or your AI code assistant:
-
-```txt
-Build a modern, responsive To-Do List frontend using React and Tailwind CSS.
-Connect it to:
-- GET /api/fetchdata
-- POST /api/createtasks
-- PATCH /api/updatetask?id=<id>
-- DELETE /api/deletetask?id=<id>
-```
-
----
-
 ## 📌 To-Do Table Schema
 
 ```ts
@@ -196,20 +182,6 @@ pgTable("tasks", {
 
 ## 📬 Feedback
 
-Got questions or suggestions? Feel free to reach out via Issues or Discussions tab!
-
+Got questions or suggestions? Feel free to reach out via Issues or Email !
+Email - rashusingh110@gmail.com
 ---
-
-## 🏁 Happy Building!
-
-```
-
----
-
-Let me know if you'd like this `README.md` turned into a downloadable file or if you want help with:
-- Hosting instructions
-- Swagger/OpenAPI format
-- Authenticated user-specific task management
-
-You're nearly production-ready! 🚀
-```
