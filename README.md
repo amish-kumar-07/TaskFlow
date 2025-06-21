@@ -1,21 +1,27 @@
-# ✅ TaskFlow API — Custom Task Management API
+# ✅ **TaskFlow API** — *Custom Task Management API*
 
-A fully functional API server for managing tasks, built with **Next.js App Router**, **NeonDB + Drizzle ORM**, and optional React frontend for user interaction. This API allows users to **Create**, **Read**, **Update**, and **Delete** tasks.
+A **fully functional API server** for managing tasks, built using **Next.js App Router**, **NeonDB + Drizzle ORM**, and an optional **React frontend** for smooth user interaction.
+This API allows users to:
 
-> ✅ **All API endpoints are tested and verified using [Postman](https://www.postman.com/)**.
+> ✅ **Create**, **Read**, **Update**, and **Delete** tasks seamlessly.
+
+> 🔍 **All endpoints are tested and verified using [Postman](https://www.postman.com/)**
+
 ---
-## 🔗 Live Project
 
-👉 [Visit the Live App](https://task-flow-hazel-xi.vercel.app/)
----
----
-## 🚀 Tech Stack
+## 🔗 **Live Project**
 
-- **Framework:** Next.js 14 (App Router)
-- **Database:** PostgreSQL (via [Neon](https://neon.tech/))
-- **ORM:** Drizzle ORM
-- **Frontend:** React + Tailwind CSS
-- **Deployed:** Yes
+👉 **[Visit the Live App](https://task-flow-hazel-xi.vercel.app/)**
+
+---
+
+## 🚀 **Tech Stack**
+
+* 🧭 **Framework:** `Next.js 14 (App Router)`
+* 🗄️ **Database:** `PostgreSQL` (hosted on [Neon](https://neon.tech/))
+* 🧬 **ORM:** `Drizzle ORM`
+* 🎨 **Frontend:** `React + Tailwind CSS`
+* ☁️ **Deployed:** `Vercel`
 
 ---
 
