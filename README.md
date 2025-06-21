@@ -80,7 +80,7 @@ A fully functional API server for managing tasks, built with **Next.js App Route
 
 ### 3. 🛠️ Update a Task (Partial)
 
-* **URL:** `/api/updatetask?id=<taskId>`
+* **URL:** `/api/update?id=<taskId>`
 * **Method:** `PATCH`
 * **Description:** Updates specific fields of a task.
 * **Request Body:** (one or more fields)
