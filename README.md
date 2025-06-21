@@ -10,9 +10,8 @@ This API allows users to:
 ---
 
 ## 🔗 **Live Project**
-```bash
-👉 **[Visit the Live App](https://task-flow-hazel-xi.vercel.app/)**
-```
+
+ **[Visit the Live App](https://task-flow-hazel-xi.vercel.app/)**
 
 ---
 
