@@ -30,18 +30,18 @@ A fully functional API server for managing tasks, built with **Next.js App Route
 
 ```json
 {
-  "success": true,
-  "data": [
-    {
-      "id": 1,
-      "title": "Complete project documentation",
-      "description": "Write comprehensive documentation",
-      "completed": false,
-      "dueDate": "2025-06-23T00:00:00.000Z",
-      "createdAt": "2025-06-20T12:00:00.000Z",
-      "updatedAt": "2025-06-20T12:00:00.000Z"
-    }
-  ]
+    "success": true,
+    "data": [
+        {
+            "id": 2,
+            "title": "Amish 2",
+            "description": "test 2",
+            "completed": true,
+            "dueDate": "2025-07-05T00:00:00.000Z",
+            "createdAt": "2025-06-21T06:00:44.882Z",
+            "updatedAt": "2025-06-21T06:23:34.314Z"
+        }
+    ]
 }
 ````
 
