@@ -46,7 +46,7 @@ All core units and API functionalities are thoroughly tested using **Jest** and 
 
 ### 📂 Notable Coverage Highlights
 
-<img src="@/public/test.png" alt="Test Coverage Summary" width="100%" />
+<img src="./public/test.png" alt="Test Coverage Summary" width="100%" />
 
 ---
 
