@@ -46,14 +46,7 @@ All core units and API functionalities are thoroughly tested using **Jest** and 
 
 ### 📂 Notable Coverage Highlights
 
-| File                       | Statements | Branches | Functions | Lines  |
-| -------------------------- | ---------- | -------- | --------- | ------ |
-| `app/page.tsx`             | 98.71%     | 90.9%    | 100%      | 98.52% |
-| `components/task-form.tsx` | 95.65%     | 77.77%   | 100%      | 100%   |
-| `components/task-item.tsx` | 96.96%     | 91.89%   | 100%      | 100%   |
-| `components/task-list.tsx` | 100%       | 100%     | 100%      | 100%   |
-| `components/ui/input.tsx`  | 100%       | 100%     | 100%      | 100%   |
-| `lib/api.ts`               | 100%       | 75%      | 100%      | 100%   |
+<img src="@/public/test.png" alt="Test Coverage Summary" width="100%" />
 
 ---
 
