@@ -44,6 +44,7 @@ export function TaskFilters({ currentFilter, onFilterChange, taskCounts }: TaskF
           variant={currentFilter === key ? 'default' : 'outline'}
           onClick={() => onFilterChange(key)}
           className="transition-all duration-200 hover:scale-105"
+          tabIndex={0}
         >
           <Icon className="mr-2 h-4 w-4" />
           {label}

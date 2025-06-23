@@ -41,13 +41,11 @@ export function TaskItem({ task, onUpdate, onDelete, isLoading }: TaskItemProps)
 
   const handleSaveEdit = async () => {
     if (!editTitle.trim()) return;
-
     await onUpdate(task.id, {
       title: editTitle.trim(),
       description: editDescription.trim() || undefined,
       dueDate: editDueDate || undefined,
     });
-
     setIsEditing(false);
   };
 
@@ -71,17 +69,20 @@ export function TaskItem({ task, onUpdate, onDelete, isLoading }: TaskItemProps)
         task.completed && 'opacity-75',
         isOverdue && 'border-l-4 border-l-destructive'
       )}
+      data-testid="task-card"
     >
-      <CardContent className="p-4">
+      <CardContent className="p-4" data-testid="card-content">
         {isEditing ? (
           <div className="space-y-3">
             <Input
+              data-testid="input-task-title"
               value={editTitle}
               onChange={(e) => setEditTitle(e.target.value)}
               placeholder="Task title"
               disabled={isLoading}
             />
             <Textarea
+              data-testid="textarea-task-description"
               value={editDescription}
               onChange={(e) => setEditDescription(e.target.value)}
               placeholder="Task description"
@@ -89,6 +90,7 @@ export function TaskItem({ task, onUpdate, onDelete, isLoading }: TaskItemProps)
               rows={2}
             />
             <Input
+              data-testid="input-date"
               type="date"
               value={editDueDate}
               onChange={(e) => setEditDueDate(e.target.value)}
@@ -99,9 +101,10 @@ export function TaskItem({ task, onUpdate, onDelete, isLoading }: TaskItemProps)
                 onClick={handleSaveEdit}
                 disabled={!editTitle.trim() || isLoading}
                 size="sm"
+                aria-label="save changes"
               >
                 {isLoading ? (
-                  <Loader2 className="h-4 w-4 animate-spin" />
+                  <Loader2 data-testid="loader2" className="h-4 w-4 animate-spin" />
                 ) : (
                   <Save className="h-4 w-4" />
                 )}
@@ -111,6 +114,7 @@ export function TaskItem({ task, onUpdate, onDelete, isLoading }: TaskItemProps)
                 variant="outline"
                 size="sm"
                 disabled={isLoading}
+                aria-label="cancel edit"
               >
                 <X className="h-4 w-4" />
               </Button>
@@ -126,11 +130,15 @@ export function TaskItem({ task, onUpdate, onDelete, isLoading }: TaskItemProps)
                   size="sm"
                   disabled={isLoading}
                   className="mt-0.5 p-0 h-auto hover:bg-transparent"
+                  aria-label="toggle complete"
                 >
                   {task.completed ? (
                     <CheckCircle className="h-5 w-5 text-green-500" />
                   ) : (
-                    <Circle className="h-5 w-5 text-muted-foreground hover:text-green-500 transition-colors" />
+                    <Circle
+                      data-testid="circle"
+                      className="h-5 w-5 text-muted-foreground hover:text-green-500 transition-colors"
+                    />
                   )}
                 </Button>
 
@@ -143,7 +151,7 @@ export function TaskItem({ task, onUpdate, onDelete, isLoading }: TaskItemProps)
                   >
                     {task.title}
                   </h3>
-                  
+
                   {task.description && (
                     <p
                       className={cn(
@@ -157,13 +165,14 @@ export function TaskItem({ task, onUpdate, onDelete, isLoading }: TaskItemProps)
 
                   <div className="flex flex-wrap gap-2 text-xs text-muted-foreground">
                     <span>Created {format(new Date(task.createdAt), 'MMM dd, yyyy')}</span>
-                    
                     {task.dueDate && (
                       <Badge
                         variant={isOverdue ? 'destructive' : 'secondary'}
                         className="text-xs"
+                        data-testid="badge"
+                        data-variant={isOverdue ? 'destructive' : 'secondary'}
                       >
-                        <Calendar className="mr-1 h-3 w-3" />
+                        <Calendar className="mr-1 h-3 w-3" data-testid="calendar" />
                         Due {format(new Date(task.dueDate), 'MMM dd, yyyy')}
                       </Badge>
                     )}
@@ -178,8 +187,9 @@ export function TaskItem({ task, onUpdate, onDelete, isLoading }: TaskItemProps)
                   size="sm"
                   disabled={isLoading}
                   className="h-8 w-8 p-0 hover:bg-muted"
+                  aria-label="edit task"
                 >
-                  <Edit3 className="h-4 w-4" />
+                  <Edit3 className="h-4 w-4" data-testid="edit3" />
                 </Button>
                 <Button
                   onClick={handleDelete}
@@ -187,9 +197,10 @@ export function TaskItem({ task, onUpdate, onDelete, isLoading }: TaskItemProps)
                   size="sm"
                   disabled={isLoading}
                   className="h-8 w-8 p-0 hover:bg-destructive/10 hover:text-destructive"
+                  aria-label="delete task"
                 >
                   {isLoading ? (
-                    <Loader2 className="h-4 w-4 animate-spin" />
+                    <Loader2 data-testid="loader2" className="h-4 w-4 animate-spin" />
                   ) : (
                     <Trash2 className="h-4 w-4" />
                   )}

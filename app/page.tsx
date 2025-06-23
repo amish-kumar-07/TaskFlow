@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useEffect, useState } from 'react';
 import { toast } from 'sonner';
@@ -25,12 +25,14 @@ export default function Home() {
     filterTasks();
   }, [tasks, currentFilter]);
 
+  const normalizeCompleted = (value: any) => Boolean(value);
+
   const loadTasks = async () => {
     try {
       const fetchedTasks = await taskAPI.getAllTasks();
       const cleaned = fetchedTasks.map(task => ({
         ...task,
-        completed: Boolean(task.completed),
+        completed: normalizeCompleted(task.completed),
       }));
       setTasks(cleaned);
     } catch (error) {
@@ -44,18 +46,18 @@ export default function Home() {
   const filterTasks = () => {
     let filtered: Task[] = [];
 
-    if (currentFilter === 'completed') {
-      filtered = tasks.filter(task => task.completed === true);
-    } else if (currentFilter === 'incomplete') {
-      filtered = tasks.filter(task => task.completed === false);
-    } else {
-      filtered = [...tasks];
+    switch (currentFilter) {
+      case 'completed':
+        filtered = tasks.filter(task => task.completed);
+        break;
+      case 'incomplete':
+        filtered = tasks.filter(task => !task.completed);
+        break;
+      default:
+        filtered = [...tasks];
     }
 
-    filtered.sort(
-      (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
-    );
-
+    filtered.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
     setFilteredTasks(filtered);
   };
 
@@ -63,7 +65,7 @@ export default function Home() {
     setIsLoading(true);
     try {
       const newTask = await taskAPI.createTask(data);
-      const fullTask = { ...newTask, completed: Boolean(newTask.completed) };
+      const fullTask = { ...newTask, completed: normalizeCompleted(newTask.completed) };
       setTasks(prev => [fullTask, ...prev]);
       toast.success('Task created successfully!');
     } catch (error) {
@@ -77,12 +79,11 @@ export default function Home() {
   const handleUpdateTask = async (id: string, data: UpdateTaskData) => {
     try {
       const updatedTask = await taskAPI.updateTask(id, data);
-      const cleanTask = { ...updatedTask, completed: Boolean(updatedTask.completed) };
-
+      const cleanTask = { ...updatedTask, completed: normalizeCompleted(updatedTask.completed) };
       setTasks(prev => prev.map(task => (task.id === id ? cleanTask : task)));
 
       if (data.completed !== undefined) {
-        toast.success(data.completed ? 'Task completed!' : 'Task marked as incomplete');
+        toast.success(normalizeCompleted(data.completed) ? 'Task completed!' : 'Task marked as incomplete');
       } else {
         toast.success('Task updated successfully!');
       }
@@ -141,10 +142,19 @@ export default function Home() {
         </div>
 
         <div className="mb-6">
-          <TaskFilters currentFilter={currentFilter} onFilterChange={setCurrentFilter} taskCounts={taskCounts} />
+          <TaskFilters
+            currentFilter={currentFilter}
+            onFilterChange={setCurrentFilter}
+            taskCounts={taskCounts}
+          />
         </div>
 
-        <TaskList tasks={filteredTasks} onUpdate={handleUpdateTask} onDelete={handleDeleteTask} isLoading={isLoading} />
+        <TaskList
+          tasks={filteredTasks}
+          onUpdate={handleUpdateTask}
+          onDelete={handleDeleteTask}
+          isLoading={isLoading}
+        />
       </div>
     </div>
   );
