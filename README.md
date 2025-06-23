@@ -25,6 +25,38 @@ This API allows users to:
 
 ---
 
+## 📊 **Test Coverage**
+
+All core units and API functionalities are thoroughly tested using **Jest** and **React Testing Library**, with automated coverage reports.
+
+> ✅ Test Runner: `Jest`
+> ✅ Coverage Command: `npm run test:coverage`
+
+### 🧪 Summary (as of latest run)
+
+| Metric      | Value                    |
+| ----------- | ------------------------ |
+| Statements  | `96.95%`                 |
+| Branches    | `86.04%`                 |
+| Functions   | `100%`                   |
+| Lines       | `98.6%`                  |
+| Test Suites | `8 passed / 8 total`     |
+| Total Tests | `121 passed / 121 total` |
+| Time        | `8.38 seconds`           |
+
+### 📂 Notable Coverage Highlights
+
+| File                       | Statements | Branches | Functions | Lines  |
+| -------------------------- | ---------- | -------- | --------- | ------ |
+| `app/page.tsx`             | 98.71%     | 90.9%    | 100%      | 98.52% |
+| `components/task-form.tsx` | 95.65%     | 77.77%   | 100%      | 100%   |
+| `components/task-item.tsx` | 96.96%     | 91.89%   | 100%      | 100%   |
+| `components/task-list.tsx` | 100%       | 100%     | 100%      | 100%   |
+| `components/ui/input.tsx`  | 100%       | 100%     | 100%      | 100%   |
+| `lib/api.ts`               | 100%       | 75%      | 100%      | 100%   |
+
+---
+
 ## 📦 API Endpoints
 
 > All endpoints use `/api/` as the base route. All responses are in JSON.
