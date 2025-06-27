@@ -19,7 +19,7 @@ jobs:
 
       - name: Run Keploy Test Suite
         run: |
-          export KEPLOY_API_KEY=${{ secrets.APIKEY0 }} && \
+          export KEPLOY_API_KEY=${{ secrets.KEPLOY_API_KEY}} && \
           keploy test-suite --app=97d75330-5487-474d-81f5-2b3d8f88cc06 \
                             --base-path=https://task-flow-hazel-xi.vercel.app/ \
                             --cloud
