@@ -49,12 +49,21 @@ All core units and API functionalities are thoroughly tested using **Jest** and 
 <img src="./public/test.png" alt="Test Coverage Summary" width="100%" />
 
 ---
+---
+## ✅ API Test Automation with Keploy
+
+This project integrates [Keploy](https://keploy.io) for API test automation via GitHub Actions.
+
+### 📸 Test Reports Screenshot
+<img src="./public/result.png" alt="Test Coverage Summary" width="100%" /><!-- or upload and use raw.githubusercontent link -->
+
+### 🔗 GitHub CI/CD Setup
+[Click to view CI/CD config](.github/workflows/ci.yml)
+---
 
 ## 📦 API Endpoints
 
 > All endpoints use `/api/` as the base route. All responses are in JSON.
-
----
 
 ### 1. 🟢 Fetch All Tasks
 
