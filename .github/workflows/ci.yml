@@ -1,0 +1,25 @@
+name: Run Keploy API Tests
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  keploy-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install Keploy CLI
+        run: |
+          curl --silent -L https://keploy.io/ent/install.sh | bash
+
+      - name: Run Keploy Test Suite
+        run: |
+          export KEPLOY_API_KEY=${{ secrets.APIKEY0 }} && \
+          keploy test-suite --app=97d75330-5487-474d-81f5-2b3d8f88cc06 \
+                            --base-path=https://task-flow-hazel-xi.vercel.app/ \
+                            --cloud
