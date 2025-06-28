@@ -34,6 +34,15 @@ Explore the complete API structure defined using the OpenAPI 3.0.3 specification
 
 ---
 
+### 🧾 **Curl Command**
+Explore the complete API structure defined using the **OpenAPI 3.0.3** specification. This documentation includes all supported endpoints along with corresponding `cURL` examples to help you interact with the API easily.
+
+🔗 **[📝 View OpenAPI Spec](https://github.com/amish-kumar-07/TaskFlow/blob/main/curlCommand.md)**  
+*(Click to preview the full schema file in your browser)*
+
+---
+
+
 ## 📊 **Test Coverage**
 
 All core units and API functionalities are thoroughly tested using **Jest** and **React Testing Library**, with automated coverage reports.
