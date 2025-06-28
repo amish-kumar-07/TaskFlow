@@ -248,5 +248,3 @@ Got suggestions or bugs to report?
 * 💬 [Open an Issue](https://github.com/amish-kumar-07/TaskFlow/issues)
 
 ---
-
-```
