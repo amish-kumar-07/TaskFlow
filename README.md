@@ -65,9 +65,9 @@ This project integrates [Keploy](https://keploy.io) for API test automation via 
 
 ### 📸 Test Reports Screenshot
 <img src="./public/result.png" alt="Test Coverage Summary" width="100%" /><!-- or upload and use raw.githubusercontent link -->
-
- >GitHub CI/CD Setup
- [Click to view CI/CD config](.github/workflows/ci.yml)
+---
+###GitHub CI/CD Setup
+  [Click to view CI/CD config](.github/workflows/ci.yml)
 ---
 
 ## 📦 API Endpoints
