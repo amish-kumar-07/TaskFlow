@@ -25,6 +25,15 @@ This API allows users to:
 
 ---
 
+### 🧾 **OpenAPI Schema**
+
+Explore the complete API structure defined using the OpenAPI 3.0.3 specification.
+
+🔗 **[📝 View OpenAPI Spec](https://github.com/amish-kumar-07/TaskFlow/blob/main/OpenApiSchema.md)**  
+*(Click to preview the full schema file in your browser)*
+
+---
+
 ## 📊 **Test Coverage**
 
 All core units and API functionalities are thoroughly tested using **Jest** and **React Testing Library**, with automated coverage reports.
