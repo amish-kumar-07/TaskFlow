@@ -1,119 +1,8 @@
 ## 📘 OpenAPI Specification – Task Flow API
 
-This project follows the OpenAPI 3.0.3 standard to define and document the task management API.
+This project follows the **OpenAPI 3.0.3** standard to define and document the task management API.
 
-### 🔗 API Base URL
-
-```
-https://task-flow-hazel-xi.vercel.app
-```
-
-### 📂 Endpoints
-
-#### `GET /api/fetchdata`
-
-* **Description**: Get all tasks.
-* **Responses**:
-
-  * `200 OK`: Returns a list of all tasks.
-  * `400 Bad Request`: Failed to retrieve tasks.
-
-#### `POST /api/createtasks`
-
-* **Description**: Create a new task.
-* **Request Body**:
-
-  ```json
-  {
-    "title": "Task Title",
-    "description": "Task Description"
-  }
-  ```
-* **Responses**:
-
-  * `200 OK`: Returns the created task.
-  * `400 Bad Request`: Invalid input.
-
-#### `PATCH /api/update?id=<task_id>`
-
-* **Description**: Update an existing task by ID.
-* **Query Parameters**:
-
-  * `id` (string, required): Task ID.
-* **Request Body**:
-
-  ```json
-  {
-    "title": "Updated Title",
-    "description": "Updated Description",
-    "completed": true
-  }
-  ```
-* **Responses**:
-
-  * `200 OK`: Returns the updated task.
-  * `400 Bad Request`: Invalid update data.
-
-#### `DELETE /api/delete?id=<task_id>`
-
-* **Description**: Delete a task by ID.
-* **Query Parameters**:
-
-  * `id` (string, required): Task ID.
-* **Responses**:
-
-  * `200 OK`: Task deleted successfully.
-  * `400 Bad Request`: Invalid request.
-
----
-
-### 📌 Components & Schemas
-
-#### `Task`
-
-```yaml
-type: object
-properties:
-  id:
-    type: string
-  title:
-    type: string
-  description:
-    type: string
-  completed:
-    type: boolean
-```
-
-#### `CreateTaskData`
-
-```yaml
-type: object
-required:
-  - title
-  - description
-properties:
-  title:
-    type: string
-  description:
-    type: string
-```
-
-#### `UpdateTaskData`
-
-```yaml
-type: object
-properties:
-  title:
-    type: string
-  description:
-    type: string
-  completed:
-    type: boolean
-```
-
----
-
-### 📄 Full OpenAPI YAML
+### 📄 Full OpenAPI SCHEMA
 
 <details>
 <summary>Click to expand</summary>
@@ -246,4 +135,5 @@ components:
 ```
 
 </details>
+
 
