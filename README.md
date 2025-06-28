@@ -1,59 +1,56 @@
 # ✅ **TaskFlow API** — *Custom Task Management API*
 
 A **fully functional API server** for managing tasks, built using **Next.js App Router**, **NeonDB + Drizzle ORM**, and an optional **React frontend** for smooth user interaction.
-This API allows users to:
 
-> ✅ **Create**, **Read**, **Update**, and **Delete** tasks seamlessly.
-
-> 🔍 **All endpoints are tested and verified using [Postman](https://www.postman.com/)**
+> ✅ **Create**, **Read**, **Update**, and **Delete** tasks seamlessly  
+> 🔍 All endpoints are tested and verified using [Postman](https://www.postman.com/)
 
 ---
 
 ## 🔗 **Live Project**
 
- **[Visit the Live App](https://task-flow-hazel-xi.vercel.app/)**
+**🌐 [Visit the Live App](https://task-flow-hazel-xi.vercel.app/)**
 
 ---
 
 ## 🚀 **Tech Stack**
 
-* 🧭 **Framework:** `Next.js 14 (App Router)`
-* 🗄️ **Database:** `PostgreSQL` (hosted on [Neon](https://neon.tech/))
-* 🧬 **ORM:** `Drizzle ORM`
-* 🎨 **Frontend:** `React + Tailwind CSS`
-* ☁️ **Deployed:** `Vercel`
+| Layer       | Technology                          |
+|-------------|--------------------------------------|
+| 🧭 Framework | `Next.js 14 (App Router)`           |
+| 🗄️ Database  | `PostgreSQL` (via [Neon](https://neon.tech/)) |
+| 🧬 ORM       | `Drizzle ORM`                       |
+| 🎨 Frontend  | `React + Tailwind CSS`              |
+| ☁️ Deploy    | `Vercel`                            |
 
 ---
+
+## 📘 **API Documentation**
 
 ### 🧾 **OpenAPI Schema**
 
-Explore the complete API structure defined using the OpenAPI 3.0.3 specification.
+Explore the full API structure based on **OpenAPI 3.0.3**:
 
 🔗 **[📝 View OpenAPI Spec](https://github.com/amish-kumar-07/TaskFlow/blob/main/OpenApiSchema.md)**  
-*(Click to preview the full schema file in your browser)*
+*(Click to preview schema definition in markdown)*
 
 ---
 
-### 🧾 **Curl Command**
-Explore the complete API structure defined using the **OpenAPI 3.0.3** specification. This documentation includes all supported endpoints along with corresponding `cURL` examples to help you interact with the API easily.
+### 🧾 **cURL Command Examples**
 
-🔗 **[📝 View OpenAPI Spec](https://github.com/amish-kumar-07/TaskFlow/blob/main/curlCommand.md)**  
-*(Click to preview the full schema file in your browser)*
+This section includes `cURL` examples for all supported endpoints:
+
+🔗 **[📝 View Curl Command Spec](https://github.com/amish-kumar-07/TaskFlow/blob/main/curlCommand.md)**  
+*(Click to preview commands and interact via terminal)*
 
 ---
-
 
 ## 📊 **Test Coverage**
 
-All core units and API functionalities are thoroughly tested using **Jest** and **React Testing Library**, with automated coverage reports.
-
-> ✅ Test Runner: `Jest`
-> ✅ Coverage Command: `npm run test:coverage`
-
-### 🧪 Summary (as of latest run)
+Thoroughly tested using **Jest** & **React Testing Library** with automated reports.
 
 | Metric      | Value                    |
-| ----------- | ------------------------ |
+|-------------|--------------------------|
 | Statements  | `96.95%`                 |
 | Branches    | `86.04%`                 |
 | Functions   | `100%`                   |
@@ -62,48 +59,56 @@ All core units and API functionalities are thoroughly tested using **Jest** and 
 | Total Tests | `121 passed / 121 total` |
 | Time        | `8.38 seconds`           |
 
-### 📂 Notable Coverage Highlights
+> ✅ Test Runner: `Jest`  
+> ✅ Coverage Command: `npm run test:coverage`
 
-<img src="./public/test.png" alt="Test Coverage Summary" width="100%" />
+#### 📂 Coverage Snapshot
+
+<img src="./public/test.png" alt="Test Coverage" width="100%" />
 
 ---
+
+## ✅ **API Test Automation with Keploy**
+
+Integrated with [Keploy](https://keploy.io) for capturing real-time API tests via CI/CD (GitHub Actions).
+
+#### 🧪 Sample Test Report
+
+<img src="./public/result.png" alt="Keploy Test Report" width="100%" />
+
+🔧 [View CI/CD Workflow](.github/workflows/ci.yml)
+
 ---
-## ✅ API Test Automation with Keploy
 
-This project integrates [Keploy](https://keploy.io) for API test automation via GitHub Actions.
+## 📦 **API Endpoints**
 
-### 📸 Test Reports Screenshot
-<img src="./public/result.png" alt="Test Coverage Summary" width="100%" /><!-- or upload and use raw.githubusercontent link -->
+All routes are prefixed with `/api/`  
+Responses are in JSON format.
+
 ---
-[Click to view CI/CD config](.github/workflows/ci.yml)
----
-
-## 📦 API Endpoints
-
-> All endpoints use `/api/` as the base route. All responses are in JSON.
 
 ### 1. 🟢 Fetch All Tasks
 
-- **URL:** `/api/fetchdata`
-- **Method:** `GET`
-- **Description:** Retrieves all tasks from the database.
+- **URL:** `/api/fetchdata`  
+- **Method:** `GET`  
+- **Description:** Fetches all tasks from the database
 
-#### ✅ Sample Response
+#### ✅ Response
 
 ```json
 {
-    "success": true,
-    "data": [
-        {
-            "id": 2,
-            "title": "Amish 2",
-            "description": "test 2",
-            "completed": true,
-            "dueDate": "2025-07-05T00:00:00.000Z",
-            "createdAt": "2025-06-21T06:00:44.882Z",
-            "updatedAt": "2025-06-21T06:23:34.314Z"
-        }
-    ]
+  "success": true,
+  "data": [
+    {
+      "id": 2,
+      "title": "Amish 2",
+      "description": "test 2",
+      "completed": true,
+      "dueDate": "2025-07-05T00:00:00.000Z",
+      "createdAt": "2025-06-21T06:00:44.882Z",
+      "updatedAt": "2025-06-21T06:23:34.314Z"
+    }
+  ]
 }
 ````
 
@@ -113,8 +118,9 @@ This project integrates [Keploy](https://keploy.io) for API test automation via 
 
 * **URL:** `/api/createtasks`
 * **Method:** `POST`
-* **Description:** Adds a new task to the database.
-* **Request Body:**
+* **Description:** Adds a new task
+
+#### 📥 Request
 
 ```json
 {
@@ -124,28 +130,29 @@ This project integrates [Keploy](https://keploy.io) for API test automation via 
 }
 ```
 
-#### ✅ Sample Response
+#### ✅ Response
 
 ```json
 {
-    "id": 7,
-    "title": "Finish assignment",
-    "description": "Submit",
-    "completed": false,
-    "dueDate": "2025-06-22T00:00:00.000Z",
-    "createdAt": "2025-06-21T06:43:19.440Z",
-    "updatedAt": "2025-06-21T06:43:19.440Z"
+  "id": 7,
+  "title": "Finish assignment",
+  "description": "Submit",
+  "completed": false,
+  "dueDate": "2025-06-22T00:00:00.000Z",
+  "createdAt": "2025-06-21T06:43:19.440Z",
+  "updatedAt": "2025-06-21T06:43:19.440Z"
 }
 ```
 
 ---
 
-### 3. 🛠️ Update a Task (Partial)
+### 3. 🛠️ Update a Task
 
 * **URL:** `/api/update?id=<taskId>`
 * **Method:** `PATCH`
-* **Description:** Updates specific fields of a task.
-* **Request Body:** (one or more fields)
+* **Description:** Updates one or more task fields
+
+#### 📥 Request (Partial)
 
 ```json
 {
@@ -153,20 +160,20 @@ This project integrates [Keploy](https://keploy.io) for API test automation via 
 }
 ```
 
-#### ✅ Sample Response
+#### ✅ Response
 
 ```json
 {
   "success": true,
   "data": {
-      "id": 3,
-      "title": "Amish 3",
-      "description": "test 3",
-      "completed": true,
-      "dueDate": "2025-07-30T00:00:00.000Z",
-      "createdAt": "2025-06-21T06:10:36.964Z",
-      "updatedAt": "2025-06-21T06:48:16.895Z"
-    }
+    "id": 3,
+    "title": "Amish 3",
+    "description": "test 3",
+    "completed": true,
+    "dueDate": "2025-07-30T00:00:00.000Z",
+    "createdAt": "2025-06-21T06:10:36.964Z",
+    "updatedAt": "2025-06-21T06:48:16.895Z"
+  }
 }
 ```
 
@@ -176,57 +183,48 @@ This project integrates [Keploy](https://keploy.io) for API test automation via 
 
 * **URL:** `/api/delete?id=<taskId>`
 * **Method:** `DELETE`
-* **Description:** Deletes a task by its ID.
+* **Description:** Deletes a task by its ID
 
-#### ✅ Sample Response
+#### ✅ Response
 
 ```json
 {
-    "success": true,
-    "message": "Task deleted",
-    "data": {
-        "id": 3,
-        "title": "Amish 3",
-        "description": "test 3",
-        "completed": true,
-        "dueDate": "2025-07-30T00:00:00.000Z",
-        "createdAt": "2025-06-21T06:10:36.964Z",
-        "updatedAt": "2025-06-21T06:48:16.895Z"
-    }
+  "success": true,
+  "message": "Task deleted",
+  "data": {
+    "id": 3,
+    "title": "Amish 3",
+    "description": "test 3",
+    "completed": true,
+    "dueDate": "2025-07-30T00:00:00.000Z",
+    "createdAt": "2025-06-21T06:10:36.964Z",
+    "updatedAt": "2025-06-21T06:48:16.895Z"
+  }
 }
 ```
 
 ---
 
-## 🧑‍💻 How to Run Locally
+## 🧑‍💻 **Run Locally**
 
-1. **Clone the repository**
+```bash
+# 1. Clone the project
+git clone https://github.com/amish-kumar-07/TaskFlow
 
-   ```bash
-   git clone https://github.com/amish-kumar-07/TaskFlow
-   ```
+# 2. Install dependencies
+npm install
 
-2. **Install dependencies**
+# 3. Setup environment variables
+# Inside .env.local
+DATABASE_URL="your-neon-postgres-url"
 
-   ```bash
-   npm install
-   ```
-
-3. **Set up your `.env.local`**
-
-   ```env
-   DATABASE_URL="your-neon-postgres-url"
-   ```
-
-4. **Run your app**
-
-   ```bash
-   npm run dev
-   ```
+# 4. Run the dev server
+npm run dev
+```
 
 ---
 
-## 📌 To-Do Table Schema
+## 🗃️ **Database Schema (Drizzle ORM)**
 
 ```ts
 pgTable("tasks", {
@@ -242,8 +240,13 @@ pgTable("tasks", {
 
 ---
 
-## 📬 Feedback
+## 📬 **Feedback & Contact**
 
-Got questions or suggestions? Feel free to reach out via Issues or Email !
-Email - rashusingh110@gmail.com
+Got suggestions or bugs to report?
+
+* 📧 Email: `rashusingh110@gmail.com`
+* 💬 [Open an Issue](https://github.com/amish-kumar-07/TaskFlow/issues)
+
 ---
+
+```
