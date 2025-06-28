@@ -4,9 +4,6 @@ This project follows the **OpenAPI 3.0.3** standard to define and document the t
 
 ### 📄 Full OpenAPI SCHEMA
 
-<details>
-<summary>Click to expand</summary>
-
 ```yaml
 openapi: 3.0.3
 info:
@@ -134,6 +131,5 @@ components:
           type: boolean
 ```
 
-</details>
 
 
