@@ -18,7 +18,7 @@ jobs:
 
       - name: Send Notification
         if: always() # Ensures this runs even if a step fails
-        uses: amish-kumar-07/ci-cd-notifier@v1
+        uses: amish-kumar-07/ci-cd-notifier@v2
         with:
           webhook_url: ${{ secrets.WEBHOOK_URL }}
           platform: "slack"     # or "discord"
