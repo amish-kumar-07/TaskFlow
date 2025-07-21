@@ -1,0 +1,25 @@
+name: CI/CD Pipeline
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Run Tests
+        run: |
+          echo "Running tests..."
+          # Simulate pass/fail
+          exit 0
+
+      - name: Send Notification
+        if: always() # Ensures this runs even if a step fails
+        uses: amish-kumar-07/ci-cd-notifier@v1
+        with:
+          webhook_url: ${{ secrets.WEBHOOK_URL }}
+          platform: "slack"     # or "discord"
+          status: ${{ job.status }}
